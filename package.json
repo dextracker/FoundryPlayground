@@ -1,0 +1,14 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Noah Khamliche <noah@0xproject.com>",
+  "license": "MIT",
+  "scripts": {
+    "test:ptp": "RUST_BACKTRACE=1 forge clean && forge test --match-contract 'PlatypusTest' -vvv --fork-url https://api.avax.network/ext/bc/C/rpc --sender 0x2404fc115dbcb35dcae5465bd878d155b34017e3",
+    "test:ptpD": "RUST_BACKTRACE=1 forge clean && forge test --debug 'testSwapPlatypus' --match-test 'testSwapPlatypus' -vvv --fork-url https://api.avax.network/ext/bc/C/rpc --sender 0x2404fc115dbcb35dcae5465bd878d155b34017e3",
+    "test:mainnet": "RUST_BACKTRACE=1 forge clean && forge test -vvvv --match-contract 'BancorV3Test' -vvv --fork-url https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161 --sender 0x2404fc115dbcb35dcae5465bd878d155b34017e3",
+    "test:mainnetD": "RUST_BACKTRACE=1 forge clean && forge test --debug 'testTradeBancorV3' -vvvv --fork-url https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161 --sender 0x2404fc115dbcb35dcae5465bd878d155b34017e3",
+    "test:avaxD": "RUST_BACKTRACE=1 forge clean && forge test --debug 'testSample' -vvvv --fork-url https://api.avax.network/ext/bc/C/rpc --sender 0x2404fc115dbcb35dcae5465bd878d155b34017e3"
+  }
+}
